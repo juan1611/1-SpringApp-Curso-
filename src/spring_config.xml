@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+
+	<bean id="admin" class="com.velasquez.Administrador">
+	<property name="idAd" value="77"></property>
+	<property name="nombre" value="Juan"></property>
+	<property name="direccion" ref="direccion"></property>
+	</bean>
+
+<!--  
+	<bean id="direccion" class="com.velasquez.Direccion">
+		<constructor-arg name="calle" value="Encino"></constructor-arg>
+		<constructor-arg name="cp" value="999999"></constructor-arg>
+	</bean>
+-->
+
+	<context:component-scan base-package="com.velasquez"></context:component-scan>
+</beans>
